@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Project</title>
+    <!-- google font link start -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
+<!-- end -->
+
+<!-- icon link start -->
+<link rel="shortcut icon" href="assets/coin.png" type="image/x-icon" />
+<!--  end -->
+
+<!-- font awesome link start -->
+<script
+  src="https://kit.fontawesome.com/8a201b6bab.js"
+  crossorigin="anonymous"></script>
+<!--end -->
+
+<!-- tailwind CSS and DaisyUI link start -->
+<link
+  href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- end -->
+
+<!-- tailwind.config.js start -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#111111",
+          normaltext: "rgba(17, 17, 17, 0.7)",
+          btnColor: "#B4F461",
+        },
+      },
+    },
+  };
+</script>
+<!--end -->
+</head>
+<body style="font-family: 'Lexend', sans-serif">
+<!-- header section start -->
+<header>
+  <!-- navbar start -->
+  <nav class="bg-[#f7f6f3] fixed top-0 left-0 right-0">
+    <div
+      class="mx-5 lg:container lg:mx-auto h-24 flex items-center justify-between"
+    >
+      <div>
+        <a href="home.html">
+          <button class="btn font-bold text-lg text-primary flex items-center justify-center bg-btnColor hover:bg-btnColor" >Blog</button>
+        </a>
+      </div>
+      <div class="hidden lg:flex gap-3 items-center">
+        <span><img src="assets/logo.png" alt="" /></span>
+        <span class="font-bold text-primary text-xl">Donate Bangladesh</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span><img src="assets/coin.png" alt="" /></span>
+        <p class="font-bold text-primary text-lg">
+          <span id="donate-amount">48000</span> BDT
+        </p>
+      </div>
+    </div>
+    <div class="h-32 bg-white flex items-center justify-center gap-7">
+      <button
+        id="donation-btn-color"
+        class="btn bg-btnColor font-bold text-lg hover:bg-btnColor"
+      > Donation </button>
+      <button
+        id="history-btn-color"
+        class="btn font-bold bg-white text-lg border border-gray-600 hover:bg-white">History </button>
+    </div>
+    <!--end -->
+  </nav>
+  <!-- navbar end -->
+</header>
+<!-- header section end -->
+
+<!-- main section start -->
+<main>
+  <!-- donation div section start -->
+  <section
+    id="donation-name"
+    class="mx-4 lg:container lg:mx-auto mt-56 flex flex-col gap-20 mb-24"
+  >
+    <!--noakhali sec start -->
+    <div
+      class="flex flex-col gap-5 lg:flex lg:flex-row items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white">
+      <!-- nk div -->
+      <div class="w-full h-[389px] lg:w-1/2">
+        <img class="w-full h-full" src="assets/noakhali.png" alt="" />
+      </div>
+      <!--nk cont div -->
+      <div class="w-full lg:w-1/2">
+        <button class="btn flex items-center justify-center gap-1 mb-5">
+          <img src="assets/coin.png" alt="" />
+          <span id="noakhali-amount" class="font-bold text-lg text-primary">700</span>
+          <p class="font-bold text-lg text-primary">BDT</p>
+        </button>
+        <h2 class="font-bold text-primary text-2xl mb-3"> Donate for Flood at Noakhali, Bangladesh </h2>
+        <p class="font-semibold text-normaltext text-lg mb-7">
+            The recent floods in Noakhali, Bangladesh, have wreaked havoc on communities, displacing thousands and damaging infrastructure. Families are in desperate need of assistance as they face food shortages, lack of clean water, and inadequate shelter. Your donations can provide crucial support, including essential supplies, medical aid, and temporary housing for those affected. By contributing to the flood relief efforts, you can help restore hope and stability to the lives of the people in Noakhali. Please consider making a donation to support these urgent humanitarian needs and assist in the recovery process.
+        </p>
+        <input
+          id="noakhali-input"
+          class="w-full bg-white text-md font-bold text-primary px-4 py-3 border-2 border-normaltext rounded-md mb-8"
+          type="text"
+          placeholder="Write Donation Amount"
+        />
+
+        <button
+          id="noakhali-btn"
+          class="btn w-full bg-btnColor hover:bg-btnColor font-bold text-xl text-primary"
+          onclick="my_modal_1.showModal()"> Donate Now</button>
+      </div>
+    </div>
+    <!--noakhali-sec- end -->
+
+    <!-- Feni-donation-start -->
+    <div
+      class="flex flex-col gap-5 lg:flex lg:flex-row items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white"
+    >
+      <!-- feni-img- content div -->
+      <div class="w-full h-[441px] lg:w-1/2">
+        <img class="w-full h-full" src="assets/feni.png" alt="" />
+      </div>
+      <!-- feni-text content div -->
+      <div class="w-full lg:w-1/2">
+        <button class="btn flex items-center justify-center gap-1 mb-5">
+          <img src="assets/coin.png" alt="" />
+          <span id="feni-amount" class="font-bold text-lg text-primary">800</span>
+          <p class="font-bold text-lg text-primary">BDT</p>
+        </button>
+        <h2 class="font-bold text-primary text-2xl mb-3">Donate for Flood Relief in Feni,Bangladesh</h2>
+        <p class="font-semibold text-normaltext text-lg mb-7">
+            The recent floods in Feni, Bangladesh, have caused widespread devastation, displacing families and destroying homes. Many communities are in urgent need of support, and your contributions can make a significant difference. Donations will provide essential supplies such as food, clean water, medical assistance, and shelter to those affected. By standing in solidarity with the people of Feni, we can help them rebuild their lives and restore hope in the face of adversity. Please consider donating to support flood relief efforts and help bring immediate aid to those in need.
+
+        </p>
+        <input
+          id="feni-input"
+          class="w-full bg-white text-md font-bold text-primary px-4 py-3 border-2 border-normaltext rounded-md mb-8"
+          type="text"
+          placeholder="Write Donation Amount"/>
+
+        <button
+          id="feni-btn"
+          class="btn w-full bg-btnColor hover:bg-btnColor font-bold text-xl text-primary"
+          onclick="my_modal_1.showModal()"> Donate Now</button>
+      </div>
+    </div>
+    <!--Feni-donation- end -->
+
+    <!-- Quota-section start -->
+    <div
+      class="flex flex-col gap-5 lg:flex lg:flex-row items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white">
+      <!-- qua-img content div -->
+      <div class="w-full h-[467px] lg:w-1/2">
+        <img class="w-full h-full" src="assets/quota-protest.png" alt="" />
+      </div>
+      <!-- qua-text content div -->
+      <div class="w-full lg:w-1/2">
+        <button class="btn flex items-center justify-center gap-1 mb-5">
+          <img src="assets/coin.png" alt="" />
+          <span id="donate-qouta-amount" class="font-bold text-lg text-primary" >4000</span
+          >
+          <p class="font-bold text-lg text-primary">BDT</p>
+        </button>
+        <h2 class="font-bold text-primary text-2xl mb-3"> Aid for Injured in the Quota Movement
+        </h2>
+        <p class="font-semibold text-normaltext text-lg mb-7">
+            The Quota Movement in Bangladesh, which sought to reform the quota system for public sector jobs, led to significant protests where many demonstrators were injured. In response, various organizations and government agencies mobilized to provide aid for those affected. This assistance included medical treatment for injuries, financial support for rehabilitation, and psychological counseling to help victims cope with the trauma of the events. Community support also played a crucial role, with local groups organizing fundraisers and awareness campaigns to assist the injured and advocate for their rights, highlighting the ongoing struggle for equitable job opportunities.
+        </p>
+        <input
+          id="donate-qouta-card"
+          class="w-full bg-white text-md font-bold text-primary px-4 py-3 border-2 border-normaltext rounded-md mb-8"
+          type="text"
+          placeholder="Write Donation Amount"/>
+ <button
+          id="donate-qouta-box"
+          class="btn w-full bg-btnColor hover:bg-btnColor font-bold text-xl text-primary"
+          onclick="my_modal_1.showModal()" > Donate Now </button>
+      </div>
+    </div>
+    <!-- Quota- section end -->
+</section>
+<dialog
+  id="my_modal_1"
+  class="modal flex flex-col items-center justify-center text-center"
+>
+  <div class="modal-box">
+    <h3 class="text-4xl font-extrabold mb-7">Congrates!</h3>
+    <div class="flex items-center justify-center mb-7">
+      <img class="w-[50px] h-[50px]" src="assets/coin.png" alt="" />
+    </div>
+    <p class="text-lg font-semibold text-normaltext mb-4">You Have Donated for Humankind
+    </p>
+    <h2 class="font-extrabold text-2xl mb-8">Successfully</h2>
+    <div class="modal-action flex items-center justify-center">
+      <form method="dialog">
+        <button
+          id="modal-btn"
+          class="btn font-bold text-lg text-normal-text" > close confirmation </button>
+      </form>
+    </div>
+  </div>
+</dialog>
+</main>
+<!-- main body section end -->
+<!-- Java Script file link-->
+<script src="donate.script.js"></script>
+<!--end -->
+</body>
+</html>
